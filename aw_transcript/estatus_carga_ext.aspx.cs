@@ -8,10 +8,65 @@ namespace aw_transcript
 {
     public partial class estatus_carga_ext : System.Web.UI.Page
     {
+        private static string str_session, str_video;
+        private static Guid guid_fidusuario, guid_fidcentro;
+        private static int s_gn;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (!IsPostBack)
+                {
+                    inf_user();
+                }
+                else
+                {
+                }
+            }
+            catch
+            {
+                Response.Redirect("ctrl_acceso.aspx");
+            }
         }
+        private void inf_user()
+        {
+            guid_fidusuario = (Guid)(Session["ss_id_user"]);
 
+            using (bd_tsEntities edm_usuario = new bd_tsEntities())
+            {
+                var i_usuario = (from i_u in edm_usuario.inf_usuarios
+                                 join i_tu in edm_usuario.fact_tipo_usuarios on i_u.id_tipo_usuario equals i_tu.id_tipo_usuario
+                                 join i_e in edm_usuario.inf_tribunal on i_u.id_tribunal equals i_e.id_tribunal
+                                 where i_u.id_usuario == guid_fidusuario
+                                 select new
+                                 {
+                                     i_u.nombres,
+                                     i_u.a_paterno,
+                                     i_u.a_materno,
+                                     i_tu.desc_tipo_usuario,
+                                     i_tu.id_tipo_usuario,
+                                     i_e.nombre,
+                                     i_e.id_tribunal
+                                 }).FirstOrDefault();
+
+                lbl_fuser.Text = i_usuario.nombres + " " + i_usuario.a_paterno + " " + i_usuario.a_materno;
+                lbl_profileuser.Text = i_usuario.desc_tipo_usuario;
+                lbl_idprofileuser.Text = i_usuario.id_tipo_usuario.ToString();
+                lbl_centername.Text = i_usuario.nombre;
+                guid_fidcentro = i_usuario.id_tribunal;
+            }
+
+            using (bd_tsEntities edm_fecha_transf = new bd_tsEntities())
+            {
+                var i_fecha_transf = (from c in edm_fecha_transf.inf_fecha_transformacion
+                                      select c).ToList();
+
+                if (i_fecha_transf.Count != 0)
+                {
+                }
+            }
+        }
         protected void cmd_search_Click(object sender, EventArgs e)
         {
             gv_usr_ext.Visible = false;

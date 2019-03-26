@@ -46,6 +46,16 @@
                         <div class=" col-md-2">
                             <div class="form-group">
                                 <h5>
+                                    <asp:Label CssClass="control-label" ID="lbl_expedient" runat="server" Text="*Expediente"></asp:Label></h5>
+                                <asp:TextBox CssClass="form-control" ID="txt_expedient" runat="server" placeholder="Capturar Expediente"></asp:TextBox>
+                                <div class="text-right">
+                                    <asp:RequiredFieldValidator ID="rfv_expedient" runat="server" ErrorMessage="*Campo Obligatorio" ControlToValidate="txt_expedient" ForeColor="DarkRed"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2">
+                            <div class="form-group">
+                                <h5>
                                     <asp:Label CssClass="control-label" ID="lbl_fechaini" runat="server" Text="*Fecha Inicial"></asp:Label></h5>
                                 <asp:TextBox CssClass="form-control" ID="txt_dateini" runat="server" placeholder="Buscar fecha incial"></asp:TextBox>
                                 <ajaxToolkit:CalendarExtender ID="ce_dateini" runat="server" BehaviorID="ce_dateini" TargetControlID="txt_dateini" Format="yyyy/MM/dd" />

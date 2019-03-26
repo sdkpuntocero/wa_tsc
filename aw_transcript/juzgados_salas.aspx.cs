@@ -555,7 +555,7 @@ namespace aw_transcript
                                         var items_fiscal = new inf_ruta_videos
                                         {
                                             id_ruta_videos = rnd,
-                                            desc_ruta_fin = @"C:\inetpub\wwwroot\ts_operacion",
+                                            desc_ruta_fin = @"C:\inetpub\wwwroot\ts\ts_operacion",
                                             ruta_user_ini = str_user_path,
                                             ruta_pass_ini = str_pass_path,
                                             desc_ruta_ini = networkPath,
@@ -726,7 +726,7 @@ namespace aw_transcript
                                         var items_fiscal = new inf_ruta_videos
                                         {
                                             id_ruta_videos = rnd,
-                                            desc_ruta_fin = @"C:\inetpub\wwwroot\ts_operacion",
+                                            desc_ruta_fin = @"C:\inetpub\wwwroot\ts\ts_operacion",
                                             ruta_user_ini = str_user_path,
                                             ruta_pass_ini = str_pass_path,
                                             desc_ruta_ini = networkPath,
@@ -1224,7 +1224,7 @@ namespace aw_transcript
                                             var items_fiscal = new inf_ruta_videos
                                             {
                                                 id_ruta_videos = rnd,
-                                                desc_ruta_fin = @"C:\inetpub\wwwroot\ts_operacion",
+                                                desc_ruta_fin = @"C:\inetpub\wwwroot\ts\ts_operacion",
                                                 ruta_user_ini = str_user_path,
                                                 ruta_pass_ini = str_pass_path,
                                                 desc_ruta_ini = networkPath,

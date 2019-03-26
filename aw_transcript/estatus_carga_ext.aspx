@@ -44,6 +44,16 @@
                             <div class=" col-md-2">
                                 <div class="form-group">
                                     <h5>
+                                        <asp:Label CssClass="control-label" ID="lbl_expedient" runat="server" Text="*Expediente"></asp:Label></h5>
+                                    <asp:TextBox CssClass="form-control" ID="txt_expedient" runat="server" placeholder="Capturar Expediente"></asp:TextBox>
+                                    <div class="text-right">
+                                        <asp:RequiredFieldValidator ID="rfv_expedient" runat="server" ErrorMessage="*Campo Obligatorio" ControlToValidate="txt_expedient" ForeColor="DarkRed" Enabled="false"></asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-md-2">
+                                <div class="form-group">
+                                    <h5>
                                         <asp:Label CssClass="control-label" ID="lbl_fechaini" runat="server" Text="*Fecha Inicial"></asp:Label></h5>
                                     <asp:TextBox CssClass="form-control" ID="txt_dateini" runat="server" placeholder="Buscar fecha incial"></asp:TextBox>
                                     <ajaxToolkit:CalendarExtender ID="ce_dateini" runat="server" BehaviorID="ce_dateini" TargetControlID="txt_dateini" Format="yyyy/MM/dd" />
@@ -77,9 +87,9 @@
                                 <asp:GridView CssClass="table" ID="gv_usuarios" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnRowDataBound="gv_usuarios_RowDataBound" OnRowCommand="gv_usuarios_RowCommand" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                                     <AlternatingRowStyle BackColor="White" />
                                     <Columns>
-                                        <asp:BoundField DataField="id_control_exp" HeaderText="ID" SortExpression="id_control_exp" Visible="true" HeaderStyle-CssClass="hideGridColumn" ItemStyle-CssClass="hideGridColumn" >
-                                        <HeaderStyle CssClass="hideGridColumn" />
-                                        <ItemStyle CssClass="hideGridColumn" />
+                                        <asp:BoundField DataField="id_control_exp" HeaderText="ID" SortExpression="id_control_exp" Visible="true" HeaderStyle-CssClass="hideGridColumn" ItemStyle-CssClass="hideGridColumn">
+                                            <HeaderStyle CssClass="hideGridColumn" />
+                                            <ItemStyle CssClass="hideGridColumn" />
                                         </asp:BoundField>
                                         <asp:BoundField DataField="sesion" HeaderText="Expediente" SortExpression="sesion" />
                                         <asp:BoundField DataField="localidad" HeaderText="Localidad" SortExpression="localidad" />
@@ -95,7 +105,7 @@
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
-                      
+
                                     <FooterStyle BackColor="#CCCC99" />
                                     <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
@@ -105,7 +115,7 @@
                                     <SortedAscendingHeaderStyle BackColor="#848384" />
                                     <SortedDescendingCellStyle BackColor="#EAEAD3" />
                                     <SortedDescendingHeaderStyle BackColor="#575357" />
-                      
+
                                 </asp:GridView>
                                 <br />
                             </div>
@@ -115,27 +125,30 @@
                                 <asp:GridView CssClass="table" ID="gv_usr_ext" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnRowCommand="gv_usr_ext_RowCommand" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
                                     <AlternatingRowStyle BackColor="White" />
                                     <Columns>
-
+                                        <asp:BoundField DataField="id_exp_mat" HeaderText="ID" SortExpression="id_exp_mat" Visible="true" HeaderStyle-CssClass="hideGridColumn" ItemStyle-CssClass="hideGridColumn">
+                                            <HeaderStyle CssClass="hideGridColumn" />
+                                            <ItemStyle CssClass="hideGridColumn" />
+                                        </asp:BoundField>
                                         <asp:BoundField DataField="nom_archivo" HeaderText="Sesión" SortExpression="nom_archivo" />
                                         <asp:BoundField DataField="duracion" HeaderText="Duración" SortExpression="duracion" />
-                                          <asp:BoundField DataField="desc_est_mat" HeaderText="Estado" SortExpression="desc_est_mat" />
+                                        <asp:BoundField DataField="desc_est_mat" HeaderText="Estado" SortExpression="desc_est_mat" />
                                         <asp:BoundField DataField="fecha_registro" HeaderText="Registro" SortExpression="fecha_registro" DataFormatString="{0:dd-MM-yyyy}" HtmlEncode="false" />
                                         <asp:TemplateField HeaderText="">
                                             <ItemTemplate>
-                                                <asp:LinkButton CssClass="buttonClass" ID="lkb_pdf_exp" runat="server" OnClick="lkb_pdf_exp_Click" Text="PDF ">
+                                                <asp:LinkButton CssClass="buttonClass" ID="lkb_pdf_exp" runat="server" OnClick="lkb_pdf_exp_Click" Text="PDF " CommandName="pdfs">
                                                     <i class="far fa-file-pdf" id="i_pdf_exp" runat="server"></i>
                                                 </asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                         <asp:TemplateField HeaderText="">
                                             <ItemTemplate>
-                                                <asp:LinkButton CssClass="buttonClass" ID="lkb_video_exp" runat="server" OnClick="lkb_video_exp_Click" Text="Video ">
+                                                <asp:LinkButton CssClass="buttonClass" ID="lkb_video_exp" runat="server" OnClick="lkb_video_exp_Click" Text="Video " CommandName="videos">
                                                     <i class="fas fa-video" id="i_video_exp" runat="server"></i>
                                                 </asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>
                                     </Columns>
-                               
+
                                     <FooterStyle BackColor="#CCCC99" />
                                     <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
                                     <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
@@ -145,7 +158,7 @@
                                     <SortedAscendingHeaderStyle BackColor="#848384" />
                                     <SortedDescendingCellStyle BackColor="#EAEAD3" />
                                     <SortedDescendingHeaderStyle BackColor="#575357" />
-                               
+
                                 </asp:GridView>
                                 <br />
                             </div>
@@ -188,7 +201,9 @@
 
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <span
+                                class="close" data-dismiss="modal" aria-hidden="true"><i
+                                    class="far fa-times-circle" id="tache_pdf"  ></i></span>
                             <h4 class="modal-title">
                                 <asp:Label ID="Label1" runat="server" Text=""></asp:Label></h4>
                         </div>
@@ -211,7 +226,11 @@
 
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     
+                            <span
+                                class="close" data-dismiss="modal" aria-hidden="true"><i
+                                    class="far fa-times-circle" id="tache_video"  ></i></span>
+
                             <h4 class="modal-title">
                                 <asp:Label ID="Label2" runat="server" Text=""></asp:Label></h4>
                         </div>
@@ -223,6 +242,7 @@
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-success" data-dismiss="modal" aria-hidden="true">Ok</button>
+
                         </div>
                     </div>
                 </ContentTemplate>

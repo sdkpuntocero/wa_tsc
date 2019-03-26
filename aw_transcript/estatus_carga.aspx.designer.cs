@@ -121,6 +121,33 @@ namespace aw_transcript {
         protected global::System.Web.UI.WebControls.Label lbl_reg;
         
         /// <summary>
+        /// Control lbl_expedient.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_expedient;
+        
+        /// <summary>
+        /// Control txt_expedient.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_expedient;
+        
+        /// <summary>
+        /// Control rfv_expedient.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_expedient;
+        
+        /// <summary>
         /// Control lbl_fechaini.
         /// </summary>
         /// <remarks>

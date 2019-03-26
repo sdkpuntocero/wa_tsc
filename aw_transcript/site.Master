@@ -51,6 +51,13 @@
                 $("#" + displayIcon).attr("src", "img/plus.png");
             }
         }
+
+        $(function () {
+            $('.modal').on('hidden.bs.modal', function (e) {
+                HTMLVideoElement = $(this).find("video");
+                HTMLVideoElement.attr("src", HTMLVideoElement.attr("src"));
+            });
+        });
     </script>
     <form id="form1" runat="server">
         <div>

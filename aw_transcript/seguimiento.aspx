@@ -20,20 +20,21 @@
                                     <img alt="" src="img/ico_exit.png" /></a>
                             </div>
                             <br />
-                            <%--   <div class="col-md-10">
+                              <div class="col-md-10">
                                 <p class="text-right">
                                     <asp:Label ID="lbl_welcome" runat="server" Text="Bienvenid@: "></asp:Label>
-                                    <asp:Label ID="lbl_name" runat="server" Text=""></asp:Label>
+                                    <asp:Label ID="lbl_fuser" runat="server" Text=""></asp:Label>
+                                    <asp:Label ID="lbl_idfuser" runat="server" Text="" Visible="false"></asp:Label>
                                     <br />
-                                    <asp:Label ID="lbl_profilelbl" runat="server" Text="Perfil: "></asp:Label>
-                                    <asp:Label ID="lbl_profile_user" runat="server" Text=""></asp:Label>
-                                    <asp:Label ID="lbl_id_profile_user" runat="server" Text="" Visible="false"></asp:Label>
+                                    <asp:Label ID="lbl_profile" runat="server" Text="Perfil: "></asp:Label>
+                                    <asp:Label ID="lbl_profileuser" runat="server" Text=""></asp:Label>
+                                    <asp:Label ID="lbl_idprofileuser" runat="server" Text="" Visible="false"></asp:Label>
                                     <br />
-                                    <asp:Label ID="lbl_user_centerP" runat="server" Text=""></asp:Label>
-                                    <asp:Label ID="lbl_user_centerCP" runat="server" Text=""></asp:Label>
-                                    <asp:Label ID="lbl_id_centerCP" runat="server" Text="" Visible="false"></asp:Label>
+                                    <asp:Label ID="lbl_center" runat="server" Text=""></asp:Label>
+                                    <asp:Label ID="lbl_centername" runat="server" Text=""></asp:Label>
+                                    <asp:Label ID="lbl_idcenter" runat="server" Text="" Visible="false"></asp:Label>
                                 </p>
-                            </div>--%>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">

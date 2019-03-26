@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-md-6 text-center" id="div_resumen" runat="server">
                     <h5>Resumen</h5>
-                    <asp:ImageButton ID="img_summary" runat="server" ImageUrl="~/img/iconos/resumen estadisticas@2x.png" OnClick="img_summary_Click" Enabled="false"/>
+                    <asp:ImageButton ID="img_summary" runat="server" ImageUrl="~/img/iconos/resumen estadisticas@2x.png" OnClick="img_summary_Click" />
                 </div>
             </div>
         </div>

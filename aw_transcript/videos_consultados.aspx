@@ -41,8 +41,8 @@
                             </div>
                         </div>
                         <div class="col-md-12 text-left">
-                            <asp:RadioButton CssClass="radio-inline" ID="rb_internos" runat="server" Text="Internos" AutoPostBack="True" OnCheckedChanged="rb_internos_CheckedChanged" />
-                            <asp:RadioButton CssClass="radio-inline" ID="rb_externos" runat="server" Text="Externos" AutoPostBack="True" OnCheckedChanged="rb_externos_CheckedChanged" />
+                            <asp:RadioButton CssClass="radio-inline" ID="rb_internos" runat="server" Text="Por Usuarios Internos" AutoPostBack="True" OnCheckedChanged="rb_internos_CheckedChanged" />
+                            <asp:RadioButton CssClass="radio-inline" ID="rb_externos" runat="server" Text="Por Usuarios Externos" AutoPostBack="True" OnCheckedChanged="rb_externos_CheckedChanged" />
                         </div>
                         <div class=" col-md-2">
                             <div class="form-group">
@@ -73,9 +73,9 @@
                             <br />
                             <asp:GridView CssClass="table" ID="gv_files" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="gv_usuarios_PageIndexChanging" PageSize="10">
                                 <Columns>
-                                    <asp:BoundField DataField="id__material_dep" HeaderText="ID" SortExpression="id__material_dep" Visible="true" />
+                                    <asp:BoundField DataField="id_material_dep" HeaderText="ID" SortExpression="id_material_dep" Visible="true" />
                                     <asp:BoundField DataField="sesion" HeaderText="Expediente" SortExpression="sesion" />
-                                    <asp:BoundField DataField="video" HeaderText="Video" SortExpression="video" Visible="true" />
+                                    <asp:BoundField DataField="nom_archivo" HeaderText="Sesión" SortExpression="nom_archivo" Visible="true" />
                                     <asp:BoundField DataField="nombres" HeaderText="Nombre de Usuario" SortExpression="nombres" />
                                     <asp:BoundField DataField="a_paterno" HeaderText="Apellido Paterno" SortExpression="a_paterno" />
                                     <asp:BoundField DataField="a_materno" HeaderText="Apellido Materno" SortExpression="a_materno" />

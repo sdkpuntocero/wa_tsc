@@ -229,12 +229,10 @@
         </EntityType>
         <EntityType Name="inf_material_dep">
           <Key>
-            <PropertyRef Name="id__material_dep" />
+            <PropertyRef Name="id_material_dep" />
           </Key>
-          <Property Name="id__material_dep" Type="int" Nullable="false" />
-          <Property Name="sesion" Type="varchar" MaxLength="250" />
-          <Property Name="video" Type="varchar" MaxLength="250" />
-          <Property Name="id_material" Type="int" Nullable="false" />
+          <Property Name="id_material_dep" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_exp_mat" Type="uniqueidentifier" Nullable="false" />
           <Property Name="id_usuario" Type="uniqueidentifier" Nullable="false" />
           <Property Name="fecha_registro" Type="datetime" />
           <Property Name="fecha_registro_alt" Type="date" />
@@ -716,12 +714,10 @@ advertencia 6002: La tabla o vista 'bd_ts.dbo.v_salas' no tiene definida ninguna
         </EntityType>
         <EntityType Name="inf_material_dep">
           <Key>
-            <PropertyRef Name="id__material_dep" />
+            <PropertyRef Name="id_material_dep" />
           </Key>
-          <Property Name="id__material_dep" Type="Int32" Nullable="false" />
-          <Property Name="sesion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="video" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
-          <Property Name="id_material" Type="Int32" Nullable="false" />
+          <Property Name="id_material_dep" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_exp_mat" Type="Guid" Nullable="false" />
           <Property Name="id_usuario" Type="Guid" Nullable="false" />
           <Property Name="fecha_registro" Type="DateTime" Precision="3" />
           <Property Name="fecha_registro_alt" Type="DateTime" Precision="0" />
@@ -1141,10 +1137,8 @@ advertencia 6002: La tabla o vista 'bd_ts.dbo.v_salas' no tiene definida ninguna
                 <ScalarProperty Name="fecha_registro_alt" ColumnName="fecha_registro_alt" />
                 <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-                <ScalarProperty Name="id_material" ColumnName="id_material" />
-                <ScalarProperty Name="video" ColumnName="video" />
-                <ScalarProperty Name="sesion" ColumnName="sesion" />
-                <ScalarProperty Name="id__material_dep" ColumnName="id__material_dep" />
+                <ScalarProperty Name="id_exp_mat" ColumnName="id_exp_mat" />
+                <ScalarProperty Name="id_material_dep" ColumnName="id_material_dep" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

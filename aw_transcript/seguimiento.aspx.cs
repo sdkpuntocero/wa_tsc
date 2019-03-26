@@ -34,54 +34,53 @@ namespace aw_transcript
         private void inf_user()
         {
             guid_fidusuario = (Guid)(Session["ss_id_user"]);
-            //Session.Abandon();
 
-            using (bd_tsEntities data_user = new bd_tsEntities())
+            using (bd_tsEntities edm_usuario = new bd_tsEntities())
             {
-                var inf_user = (from i_u in data_user.inf_usuarios
-                                join i_tu in data_user.fact_tipo_usuarios on i_u.id_tipo_usuario equals i_tu.id_tipo_usuario
-                                join i_e in data_user.inf_tribunal on i_u.id_tribunal equals i_e.id_tribunal
-                                where i_u.id_usuario == guid_fidusuario
-                                select new
-                                {
-                                    i_u.nombres,
-                                    i_u.a_paterno,
-                                    i_u.a_materno,
-                                    i_tu.desc_tipo_usuario,
-                                    i_tu.id_tipo_usuario,
-                                    i_e.nombre,
-                                    i_e.id_tribunal
-                                }).FirstOrDefault();
+                var i_usuario = (from i_u in edm_usuario.inf_usuarios
+                                 join i_tu in edm_usuario.fact_tipo_usuarios on i_u.id_tipo_usuario equals i_tu.id_tipo_usuario
+                                 join i_e in edm_usuario.inf_tribunal on i_u.id_tribunal equals i_e.id_tribunal
+                                 where i_u.id_usuario == guid_fidusuario
+                                 select new
+                                 {
+                                     i_u.nombres,
+                                     i_u.a_paterno,
+                                     i_u.a_materno,
+                                     i_tu.desc_tipo_usuario,
+                                     i_tu.id_tipo_usuario,
+                                     i_e.nombre,
+                                     i_e.id_tribunal
+                                 }).FirstOrDefault();
 
-                //lbl_fuser.Text = inf_user.nombres + " " + inf_user.a_paterno + " " + inf_user.a_materno;
-                //lbl_profileuser.Text = inf_user.desc_tipo_usuario;
-                //lbl_idprofileuser.Text = inf_user.id_tipo_usuario.ToString();
-                //lbl_centername.Text = inf_user.nombre;
-                //lbl_idcenter.Text = inf_user.id_tribunal.ToString();
+                lbl_fuser.Text = i_usuario.nombres + " " + i_usuario.a_paterno + " " + i_usuario.a_materno;
+                lbl_profileuser.Text = i_usuario.desc_tipo_usuario;
+                lbl_idprofileuser.Text = i_usuario.id_tipo_usuario.ToString();
+                lbl_centername.Text = i_usuario.nombre;
+                guid_fidcentro = i_usuario.id_tribunal;
 
-                int str_id_type_user = inf_user.id_tipo_usuario;
-                switch (str_id_type_user)
-                {
-                    case 1:
+                //int str_id_type_user = inf_user.id_tipo_usuario;
+                //switch (str_id_type_user)
+                //{
+                //    case 1:
 
-                        break;
+                //        break;
 
-                    case 2:
+                //    case 2:
 
-                        break;
+                //        break;
 
-                    case 3:
+                //    case 3:
 
-                        break;
+                //        break;
 
-                    case 4:
+                //    case 4:
 
-                        //div_tracing.Visible = false;
-                        //div_control_centers.Visible = false;
-                        //div_resumen.Visible = false;
+                //        //div_tracing.Visible = false;
+                //        //div_control_centers.Visible = false;
+                //        //div_resumen.Visible = false;
 
-                        break;
-                }
+                //        break;
+                //}
             }
         }
 
@@ -240,21 +239,21 @@ namespace aw_transcript
                 {
                     case "ACTIVO":
 
-                        using (var edm_material = new bd_tsEntities())
-                        {
-                            var i_material = new inf_material_dep
-                            {
-                                sesion = str_session,
-                                video = str_video,
-                                id_usuario = guid_fidusuario,
-                                id_material = 0,
-                                fecha_registro = DateTime.Now,
-                                fecha_registro_alt = DateTime.Now
-                            };
+                        //using (var edm_material = new bd_tsEntities())
+                        //{
+                        //    var i_material = new inf_material_dep
+                        //    {
+                        //        sesion = str_session,
+                        //        video = str_video,
+                        //        id_usuario = guid_fidusuario,
+                        //        id_material = 0,
+                        //        fecha_registro = DateTime.Now,
+                        //        fecha_registro_alt = DateTime.Now
+                        //    };
 
-                            edm_material.inf_material_dep.Add(i_material);
-                            edm_material.SaveChanges();
-                        }
+                        //    edm_material.inf_material_dep.Add(i_material);
+                        //    edm_material.SaveChanges();
+                        //}
 
                         string d_pdf = "videos\\" + str_sessionf + "\\" + str_session + "\\" + str_session + "\\ExtraFiles\\" + str_session + "_Report.pdf";
                         iframe_pdf.Visible = true;
@@ -406,21 +405,21 @@ namespace aw_transcript
                 {
                     case "ACTIVO":
 
-                        using (var edm_material = new bd_tsEntities())
-                        {
-                            var i_material = new inf_material_dep
-                            {
-                                sesion = str_session,
-                                video = str_video,
-                                id_usuario = guid_fidusuario,
-                                id_material = 0,
-                                fecha_registro = DateTime.Now,
-                                fecha_registro_alt = DateTime.Now
-                            };
+                        //using (var edm_material = new bd_tsEntities())
+                        //{
+                        //    var i_material = new inf_material_dep
+                        //    {
+                        //        sesion = str_session,
+                        //        video = str_video,
+                        //        id_usuario = guid_fidusuario,
+                        //        id_material = 0,
+                        //        fecha_registro = DateTime.Now,
+                        //        fecha_registro_alt = DateTime.Now
+                        //    };
 
-                            edm_material.inf_material_dep.Add(i_material);
-                            edm_material.SaveChanges();
-                        }
+                        //    edm_material.inf_material_dep.Add(i_material);
+                        //    edm_material.SaveChanges();
+                        //}
 
                         string d_pdf = "videos\\" + str_session + "\\" + str_session + "\\ExtraFiles\\" + str_session + "_Report.pdf";
                         iframe_pdf.Visible = true;

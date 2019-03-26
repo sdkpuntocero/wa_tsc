@@ -65,12 +65,14 @@ namespace aw_transcript
             {
                 var inf_user = (from inf_lv in data_user.inf_material_dep
                                 join inf_u in data_user.inf_usuarios on inf_lv.id_usuario equals inf_u.id_usuario
+                                join inf_m in data_user.inf_exp_mat on inf_lv.id_exp_mat equals inf_m.id_exp_mat
+                                join inf_mj in data_user.inf_master_jvl on inf_m.id_control_exp equals inf_mj.id_control_exp
                                 where inf_lv.fecha_registro_alt >= str_fdateini && inf_lv.fecha_registro_alt <= str_fdatefin
                                 select new
                                 {
-                                    inf_lv.id__material_dep,
-                                    inf_lv.sesion,
-                                    inf_lv.video,
+                                    inf_lv.id_material_dep,
+                                    inf_mj.sesion,
+                                    inf_m.nom_archivo,
                                     inf_u.nombres,
                                     inf_u.a_paterno,
                                     inf_u.a_materno,
@@ -104,12 +106,14 @@ namespace aw_transcript
                     {
                         var inf_user = (from inf_lv in data_user.inf_material_dep
                                         join inf_u in data_user.inf_usuarios on inf_lv.id_usuario equals inf_u.id_usuario
+                                        join inf_m in data_user.inf_exp_mat on inf_lv.id_exp_mat equals inf_m.id_exp_mat
+                                        join inf_mj in data_user.inf_master_jvl on inf_m.id_control_exp equals inf_mj.id_control_exp
                                         where inf_lv.fecha_registro_alt >= str_fdateini && inf_lv.fecha_registro_alt <= str_fdatefin
                                         select new
                                         {
-                                            inf_lv.id__material_dep,
-                                            inf_lv.sesion,
-                                            inf_lv.video,
+                                            inf_lv.id_material_dep,
+                                            inf_mj.sesion,
+                                            inf_m.nom_archivo,
                                             inf_u.nombres,
                                             inf_u.a_paterno,
                                             inf_u.a_materno,
@@ -117,9 +121,19 @@ namespace aw_transcript
                                             inf_lv.fecha_registro_alt,
                                         }).ToList();
 
-                        gv_files.DataSource = inf_user;
-                        gv_files.DataBind();
-                        gv_files.Visible = true;
+                        if (inf_user.Count == 0)
+                        {
+                            lblModalTitle.Text = "transcript";
+                            lblModalBody.Text = "Sin registros";
+                            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#myModal').modal();", true);
+                            upModal.Update();
+                        }
+                        else
+                        {
+                            gv_files.DataSource = inf_user;
+                            gv_files.DataBind();
+                            gv_files.Visible = true;
+                        }
                     }
                 }
                 else if (rb_externos.Checked)

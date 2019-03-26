@@ -71,51 +71,108 @@ namespace aw_transcript
         {
             gv_usr_ext.Visible = false;
 
-            using (var edm_materialf = new bd_tsEntities())
+            if (string.IsNullOrEmpty(txt_expedient.Text))
             {
-                DateTime dt_strt_dte = Convert.ToDateTime(txt_dateini.Text);
-                DateTime dt_end_dte = Convert.ToDateTime(txt_datefin.Text);
 
-                var inf_user = (from i_m in edm_materialf.inf_master_jvl
-                                join i_tu in edm_materialf.fact_est_exp on i_m.id_estatus_exp equals i_tu.id_est_exp
-                                join i_rv in edm_materialf.inf_ruta_videos on i_m.id_ruta_videos equals i_rv.id_ruta_videos
-                                join i_s in edm_materialf.inf_salas on i_rv.id_sala equals i_s.id_sala
-                                join i_j in edm_materialf.inf_juzgados on i_s.id_juzgado equals i_j.id_juzgado
-                                where i_m.fecha_registro >= dt_strt_dte
-                                where i_m.fecha_registro <= dt_end_dte
-                                select new
-                                {
-                                    i_m.id_control_exp,
-                                    i_m.sesion,
-                                    i_j.localidad,
-                                    i_j.numero,
-                                    i_s.nombre,
-                                    i_m.titulo,
-                                    i_m.err_carga,
-                                    i_tu.desc_est_exp,
-                                    i_m.fecha_registro
-                                }).ToList();
-
-                gv_usuarios.DataSource = inf_user;
-                gv_usuarios.DataBind();
-                gv_usuarios.Visible = true;
-
-                if (inf_user.Count == 0)
+                using (var edm_materialf = new bd_tsEntities())
                 {
-                    gv_usr_ext.Visible = false;
-                    gv_usuarios.Visible = false;
-                    lblModalTitle.Text = "transcript";
-                    lblModalBody.Text = "No hay videos que mostrar, revise los datos de consulta o contacte a Soporte técnico";
-                    ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#myModal').modal();", true);
-                    iframe_pdf.Visible = false;
-                    play_video.Visible = false;
+                    DateTime dt_strt_dte = Convert.ToDateTime(txt_dateini.Text);
+                    DateTime dt_end_dte = Convert.ToDateTime(txt_datefin.Text);
 
-                    upModal.Update();
-                }
-                else
-                {
+                    var inf_user = (from i_m in edm_materialf.inf_master_jvl
+                                    join i_tu in edm_materialf.fact_est_exp on i_m.id_estatus_exp equals i_tu.id_est_exp
+                                    join i_rv in edm_materialf.inf_ruta_videos on i_m.id_ruta_videos equals i_rv.id_ruta_videos
+                                    join i_s in edm_materialf.inf_salas on i_rv.id_sala equals i_s.id_sala
+                                    join i_j in edm_materialf.inf_juzgados on i_s.id_juzgado equals i_j.id_juzgado
+                                    where i_m.fecha_registro >= dt_strt_dte
+                                    where i_m.fecha_registro <= dt_end_dte
+                                    select new
+                                    {
+                                        i_m.id_control_exp,
+                                        i_m.sesion,
+                                        i_j.localidad,
+                                        i_j.numero,
+                                        i_s.nombre,
+                                        i_m.titulo,
+                                        i_m.err_carga,
+                                        i_tu.desc_est_exp,
+                                        i_m.fecha_registro
+                                    }).ToList();
+
+                    gv_usuarios.DataSource = inf_user;
+                    gv_usuarios.DataBind();
+                    gv_usuarios.Visible = true;
+
+                    if (inf_user.Count == 0)
+                    {
+                        gv_usr_ext.Visible = false;
+                        gv_usuarios.Visible = false;
+                        lblModalTitle.Text = "transcript";
+                        lblModalBody.Text = "No hay videos que mostrar, revise los datos de consulta o contacte a Soporte técnico";
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#myModal').modal();", true);
+                        iframe_pdf.Visible = false;
+                        play_video.Visible = false;
+
+                        upModal.Update();
+                    }
+                    else
+                    {
+                    }
                 }
             }
+            else
+            {
+
+                string str_expf = txt_expedient.Text;
+
+                using (var edm_materialf = new bd_tsEntities())
+                {
+                    DateTime dt_strt_dte = Convert.ToDateTime(txt_dateini.Text);
+                    DateTime dt_end_dte = Convert.ToDateTime(txt_datefin.Text);
+
+                    var inf_user = (from i_m in edm_materialf.inf_master_jvl
+                                    join i_tu in edm_materialf.fact_est_exp on i_m.id_estatus_exp equals i_tu.id_est_exp
+                                    join i_rv in edm_materialf.inf_ruta_videos on i_m.id_ruta_videos equals i_rv.id_ruta_videos
+                                    join i_s in edm_materialf.inf_salas on i_rv.id_sala equals i_s.id_sala
+                                    join i_j in edm_materialf.inf_juzgados on i_s.id_juzgado equals i_j.id_juzgado
+                                    where i_m.fecha_registro >= dt_strt_dte
+                                    where i_m.fecha_registro <= dt_end_dte
+                                    where i_m.sesion == str_expf
+                                    select new
+                                    {
+                                        i_m.id_control_exp,
+                                        i_m.sesion,
+                                        i_j.localidad,
+                                        i_j.numero,
+                                        i_s.nombre,
+                                        i_m.titulo,
+                                        i_m.err_carga,
+                                        i_tu.desc_est_exp,
+                                        i_m.fecha_registro
+                                    }).ToList();
+
+                    gv_usuarios.DataSource = inf_user;
+                    gv_usuarios.DataBind();
+                    gv_usuarios.Visible = true;
+
+                    if (inf_user.Count == 0)
+                    {
+                        gv_usr_ext.Visible = false;
+                        gv_usuarios.Visible = false;
+                        lblModalTitle.Text = "transcript";
+                        lblModalBody.Text = "No hay videos que mostrar, revise los datos de consulta o contacte a Soporte técnico";
+                        ScriptManager.RegisterStartupScript(Page, Page.GetType(), "myModal", "$('#myModal').modal();", true);
+                        iframe_pdf.Visible = false;
+                        play_video.Visible = false;
+
+                        upModal.Update();
+                    }
+                    else
+                    {
+                    }
+                }
+            }
+
         }
 
         protected void btn_video_ext_Click(object sender, EventArgs e)
@@ -204,6 +261,7 @@ namespace aw_transcript
                                     //where i_m.id_est_mat == 2
                                     select new
                                     {
+                                        i_m.id_exp_mat,
                                         i_m.nom_archivo,
 
                                         i_m.duracion,
@@ -273,38 +331,46 @@ namespace aw_transcript
         {
         }
 
+        protected void btn_closem_Click(object sender, EventArgs e)
+        {
+            play_video.Visible = false;
+            play_video.Attributes["src"] = "";
+        }
+
         protected void lkb_video_exp_Click(object sender, EventArgs e)
         {
         }
 
         protected void gv_usr_ext_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            string str_session;
-            //string str_video;
-            string str_pdf;
-            string str_mp4;
-            string str_exp;
+            string str_session = null;
+            string str_video = null;
+            string str_pdf = null;
+            string str_mp4 = null;
+            string str_exp = null;
 
             int int_estatus;
 
-            Guid guid_exp;
+            Guid guid_exp, guid_se;
 
             try
             {
                 GridViewRow gvr = (GridViewRow)(((LinkButton)e.CommandSource).NamingContainer);
 
-                string nom_archivo = gvr.Cells[0].Text.ToString().Trim();
+                guid_se = Guid.Parse(gvr.Cells[0].Text.ToString().Trim());
 
                 using (var data_mat = new bd_tsEntities())
                 {
                     var items_mat = (from c in data_mat.inf_exp_mat
-                                     where c.nom_archivo == nom_archivo
+                                     where c.id_exp_mat == guid_se
                                      select c).FirstOrDefault();
-
+            
                     guid_exp = Guid.Parse(items_mat.id_control_exp.ToString());
-                    str_pdf = items_mat.ruta_ext.Replace("C:\\inetpub\\wwwroot", "");
-                    str_mp4 = items_mat.ruta_archivo.Replace("C:\\inetpub\\wwwroot", "");
+                    str_video = items_mat.ruta_archivo;
+                    str_pdf = items_mat.ruta_ext.Replace("C:\\inetpub\\wwwroot\\ts", "").Replace(".mp4",".pdf");
+                    str_mp4 = items_mat.ruta_archivo.Replace("C:\\inetpub\\wwwroot\\ts", "");
                     int_estatus = 1;
+                    str_session = items_mat.nom_archivo;
 
                     var i_extmat = (from c in data_mat.inf_master_jvl
                                     where c.id_control_exp == guid_exp
@@ -321,27 +387,27 @@ namespace aw_transcript
                 //    str_sessionf = items_mat.sesion;
                 //}
 
-                str_session = nom_archivo;
+           
 
                 switch (int_estatus)
                 {
                     case 1:
 
-                        //using (var edm_material = new bd_tsEntities())
-                        //{
-                        //    var i_material = new inf_material_dep
-                        //    {
-                        //        sesion = str_session,
-                        //        video = str_video,
-                        //        id_usuario = guid_fidusuario,
-                        //        id_material = 0,
-                        //        fecha_registro = DateTime.Now,
-                        //        fecha_registro_alt = DateTime.Now
-                        //    };
+                        using (var edm_material = new bd_tsEntities())
+                        {
+                            var i_material = new inf_material_dep
+                            {
+                                id_exp_mat = guid_se,
 
-                        //    edm_material.inf_material_dep.Add(i_material);
-                        //    edm_material.SaveChanges();
-                        //}
+                                id_usuario = guid_fidusuario,
+
+                                fecha_registro = DateTime.Now,
+                                fecha_registro_alt = DateTime.Now
+                            };
+
+                            edm_material.inf_material_dep.Add(i_material);
+                            edm_material.SaveChanges();
+                        }
 
                         //string d_pdf = "videos\\" + str_sessionf + "\\" + str_session + "\\" + str_session + "\\ExtraFiles\\" + str_session + "_Report.pdf";
                         //iframe_pdf.Visible = true;
@@ -350,8 +416,8 @@ namespace aw_transcript
                         //string str_namefile = @"videos\\" + str_sessionf + "\\" + str_session + "\\" + str_session + "\\" + str_video;
 
                         LinkButton btn = e.CommandSource as LinkButton;
-                        string name_btn = btn.ID;
-
+                        string name_btn = null;
+                        name_btn = btn.ID;
                         if (name_btn == "lkb_pdf_exp")
                         {
                             iframe_pdf.Visible = true;

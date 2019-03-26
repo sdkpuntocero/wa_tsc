@@ -251,21 +251,21 @@ namespace aw_transcript
                 {
                     case "ACTIVO":
 
-                        using (var edm_material = new bd_tsEntities())
-                        {
-                            var i_material = new inf_material_dep
-                            {
-                                sesion = str_session,
-                                video = str_video,
-                                id_usuario = guid_fidusuario,
-                                id_material = 0,
-                                fecha_registro = DateTime.Now,
-                                fecha_registro_alt = DateTime.Now
-                            };
+                        //using (var edm_material = new bd_tsEntities())
+                        //{
+                        //    var i_material = new inf_material_dep
+                        //    {
+                        //        sesion = str_session,
+                        //        video = str_video,
+                        //        id_usuario = guid_fidusuario,
+                        //        id_material = 0,
+                        //        fecha_registro = DateTime.Now,
+                        //        fecha_registro_alt = DateTime.Now
+                        //    };
 
-                            edm_material.inf_material_dep.Add(i_material);
-                            edm_material.SaveChanges();
-                        }
+                        //    edm_material.inf_material_dep.Add(i_material);
+                        //    edm_material.SaveChanges();
+                        //}
 
                         string d_pdf = "videos\\" + str_session + "\\" + str_session + "\\ExtraFiles\\" + str_session + "_Report.pdf";
                         iframe_pdf.Visible = true;
@@ -494,21 +494,21 @@ namespace aw_transcript
                 {
                     case "ACTIVO":
 
-                        using (var edm_material = new bd_tsEntities())
-                        {
-                            var i_material = new inf_material_dep
-                            {
-                                sesion = str_session,
-                                video = str_video,
-                                id_usuario = guid_fidusuario,
-                                id_material = 0,
-                                fecha_registro = DateTime.Now,
-                                fecha_registro_alt = DateTime.Now
-                            };
+                        //using (var edm_material = new bd_tsEntities())
+                        //{
+                        //    var i_material = new inf_material_dep
+                        //    {
+                        //        sesion = str_session,
+                        //        video = str_video,
+                        //        id_usuario = guid_fidusuario,
+                        //        id_material = 0,
+                        //        fecha_registro = DateTime.Now,
+                        //        fecha_registro_alt = DateTime.Now
+                        //    };
 
-                            edm_material.inf_material_dep.Add(i_material);
-                            edm_material.SaveChanges();
-                        }
+                        //    edm_material.inf_material_dep.Add(i_material);
+                        //    edm_material.SaveChanges();
+                        //}
 
                         string d_pdf = "videos\\" + str_sessionf + "\\" + str_session + "\\" + str_session + "\\ExtraFiles\\" + str_session + "_Report.pdf";
                         iframe_pdf.Visible = true;
@@ -643,21 +643,21 @@ namespace aw_transcript
                     //    str_session_p
                     //}
 
-                    using (var edm_material = new bd_tsEntities())
-                    {
-                        var i_material = new inf_material_dep
-                        {
-                            sesion = str_session,
-                            video = str_video,
-                            id_usuario = guid_fidusuario,
-                            id_material = 0,
-                            fecha_registro = DateTime.Now,
-                            fecha_registro_alt = DateTime.Now
-                        };
+                    //using (var edm_material = new bd_tsEntities())
+                    //{
+                    //    var i_material = new inf_material_dep
+                    //    {
+                    //        sesion = str_session,
+                    //        video = str_video,
+                    //        id_usuario = guid_fidusuario,
+                    //        id_material = 0,
+                    //        fecha_registro = DateTime.Now,
+                    //        fecha_registro_alt = DateTime.Now
+                    //    };
 
-                        edm_material.inf_material_dep.Add(i_material);
-                        edm_material.SaveChanges();
-                    }
+                    //    edm_material.inf_material_dep.Add(i_material);
+                    //    edm_material.SaveChanges();
+                    //}
 
                     using (var data_mat = new bd_tsEntities())
                     {

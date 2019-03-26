@@ -14,10 +14,8 @@ namespace wa_tsc
     
     public partial class inf_material_dep
     {
-        public int id__material_dep { get; set; }
-        public string sesion { get; set; }
-        public string video { get; set; }
-        public int id_material { get; set; }
+        public int id_material_dep { get; set; }
+        public System.Guid id_exp_mat { get; set; }
         public System.Guid id_usuario { get; set; }
         public Nullable<System.DateTime> fecha_registro { get; set; }
         public Nullable<System.DateTime> fecha_registro_alt { get; set; }

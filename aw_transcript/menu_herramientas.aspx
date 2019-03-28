@@ -42,7 +42,7 @@
                     <h5>Consulta de Salas</h5>
                     <asp:ImageButton ID="img_salas" runat="server" ImageUrl="~/img/iconos/salas@2x.png" Width="64" Height="64" OnClick="img_salas_Click" />
                 </div>
-                <div class="col-md-2 text-center" id="div_transformation" runat="server">
+                <div class="col-md-2 text-center" id="div_transformation" runat="server" visible="false">
                     <h5>Fecha y Hora Carga de Videos</h5>
                     <asp:ImageButton ID="img_transformation" runat="server" ImageUrl="~/img/iconos/videos@2x.png" OnClick="img_transformation_Click" />
                 </div>

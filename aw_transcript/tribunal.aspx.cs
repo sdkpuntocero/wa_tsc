@@ -167,30 +167,13 @@ namespace aw_transcript
                 int_idcodigocp = tbl_sepomex[0].id_codigo;
             }
 
-            using (var data_user = new bd_tsEntities())
-            {
-                var items_user = (from c in data_user.inf_tribunal
-                                  where c.id_tribunal == guid_fidcentro
-                                  select c).FirstOrDefault();
-
-                items_user.nombre = str_empresa;
-                items_user.telefono = str_telefono;
-                items_user.email = str_email;
-                items_user.callenum = str_callenum;
-
-                items_user.id_codigo = int_idcodigocp;
-
-                data_user.SaveChanges();
-            }
+            
             using (bd_tsEntities edm_fecha_transf = new bd_tsEntities())
             {
                 var ii_fecha_transf = (from u in edm_fecha_transf.inf_tribunal
                                        select u).ToList();
 
                 if (ii_fecha_transf.Count == 0)
-                {
-                }
-                else
                 {
                     using (var insert_userf = new bd_tsEntities())
                     {
@@ -204,6 +187,25 @@ namespace aw_transcript
                         insert_userf.inf_tribunal_dep.Add(items_userf);
                         insert_userf.SaveChanges();
                     }
+                }
+                else
+                {
+                    using (var data_user = new bd_tsEntities())
+                    {
+                        var items_user = (from c in data_user.inf_tribunal
+                                          where c.id_tribunal == guid_fidcentro
+                                          select c).FirstOrDefault();
+
+                        items_user.nombre = str_empresa;
+                        items_user.telefono = str_telefono;
+                        items_user.email = str_email;
+                        items_user.callenum = str_callenum;
+
+                        items_user.id_codigo = int_idcodigocp;
+
+                        data_user.SaveChanges();
+                    }
+                   
                 }
             }
             using (bd_tsEntities data_user = new bd_tsEntities())

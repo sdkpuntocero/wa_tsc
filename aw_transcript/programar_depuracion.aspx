@@ -42,7 +42,7 @@
                                     <div class="panel-group" runat="server" id="pg_dayvideos">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">
-                                                <h4 class="text-left">Dias a conservar Copias de Videos</h4>
+                                                <h4 class="text-left">Dias de Respaldo de Videos</h4>
                                                 <asp:RadioButton CssClass="radio-inline text-right" ID="rb_add_dayvideos" runat="server" Text="Seleccione para Agregar" AutoPostBack="True" OnCheckedChanged="rb_add_dayvideos_CheckedChanged" />
                                                 <asp:RadioButton CssClass="radio-inline text-right" ID="rb_edit_dayvideos" runat="server" Text="Seleccione para Editar" AutoPostBack="True" OnCheckedChanged="rb_edit_dayvideos_CheckedChanged" />
                                             </div>

@@ -39,7 +39,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h3 class="text-left">
-                                    <asp:Label ID="lbl_reg" runat="server" Text="Estado de Carga de Videos"></asp:Label></h3>
+                                    <asp:Label ID="lbl_reg" runat="server" Text="Estatus Carga de Videos"></asp:Label></h3>
                             </div>
                             <div class=" col-md-2">
                                 <div class="form-group">

@@ -65,8 +65,7 @@ namespace aw_transcript
                     case 2:
                         div_salas.Visible = true;
 
-                        div_transformation.Visible = true;
-                        div_dayvideos.Visible = true;
+                  
 
                         break;
 
@@ -74,15 +73,13 @@ namespace aw_transcript
 
                         div_salas.Visible = true;
 
-                        div_transformation.Visible = true;
-                        div_dayvideos.Visible = true;
+                 
                         break;
 
                     case 4:
                         div_salas.Visible = false;
 
-                        div_transformation.Visible = false;
-                        div_dayvideos.Visible = false;
+                    
                         div1.Visible = false;
                         div6.Visible = true;
                         break;

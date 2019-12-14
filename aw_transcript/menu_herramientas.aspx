@@ -46,12 +46,12 @@
                     <h5>Fecha y Hora Carga de Videos</h5>
                     <asp:ImageButton ID="img_transformation" runat="server" ImageUrl="~/img/iconos/videos@2x.png" OnClick="img_transformation_Click" />
                 </div>
-                <div class="col-md-2 text-center" id="div_dayvideos" runat="server">
+                <div class="col-md-2 text-center" id="div_dayvideos" runat="server" visible="false">
                     <h5>Dias de Respaldo de Videos</h5>
                     <asp:ImageButton ID="img_dayvideos" runat="server" ImageUrl="~/img/iconos/control de centros@2x.png" OnClick="img_dayvideos_Click" />
                 </div>
                 <div class="col-md-2 text-center" id="div1" runat="server">
-                    <h5>Estatus Carga de Videos</h5>
+                    <h5>Estado de Carga de Videos</h5>
                     <asp:ImageButton ID="img_conversion" runat="server" ImageUrl="~/img/iconos/herramientas@2x.png" OnClick="img_conversion_Click" />
                 </div>
             </div>

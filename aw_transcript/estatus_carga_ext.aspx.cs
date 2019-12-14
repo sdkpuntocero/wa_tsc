@@ -367,8 +367,8 @@ namespace aw_transcript
             
                     guid_exp = Guid.Parse(items_mat.id_control_exp.ToString());
                     str_video = items_mat.ruta_archivo;
-                    str_pdf = items_mat.ruta_ext.Replace("C:\\inetpub\\wwwroot\\ts", "").Replace(".mp4",".pdf");
-                    str_mp4 = items_mat.ruta_archivo.Replace("C:\\inetpub\\wwwroot\\ts", "");
+                    str_pdf = items_mat.ruta_ext.Replace("C:\\inetpub\\wwwroot\\", "").Replace(".mp4",".pdf");
+                    str_mp4 = items_mat.ruta_archivo.Replace("C:\\inetpub\\wwwroot\\", "");
                     int_estatus = 1;
                     str_session = items_mat.nom_archivo;
 
@@ -392,7 +392,7 @@ namespace aw_transcript
                 switch (int_estatus)
                 {
                     case 1:
-
+                        guid_fidusuario = (Guid)(Session["ss_id_user"]);
                         using (var edm_material = new bd_tsEntities())
                         {
                             var i_material = new inf_material_dep

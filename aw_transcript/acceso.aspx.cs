@@ -75,6 +75,7 @@ namespace aw_transcript
 
                     if (str_password_V == str_password && str_iduser_status == 1)
                     {
+                 
                         Session["ss_id_user"] = str_id_user;
                         Response.Redirect("menu.aspx");
                     }

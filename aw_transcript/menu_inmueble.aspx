@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="menu_tribunal.aspx.cs" Inherits="aw_transcript.menu_tribunal" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="menu_inmueble.aspx.cs" Inherits="aw_transcript.menu_tribunal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -39,12 +39,20 @@
             </div>
             <div class="row animated bounceInUp">
                 <div class="col-md-4 text-center" id="div_tribunales" runat="server">
-                    <h5>Tribunal</h5>
-                    <asp:ImageButton ID="img_tribunales" runat="server" ImageUrl="~/img/iconos/tribunal@2x.png" Width="64" Height="64" OnClick="img_tribunales_Click" />
+                    <h5>Inmueble</h5>
+                    <asp:LinkButton CssClass="buttonClass" ID="img_tribunales" runat="server" OnClick="img_tribunales_Click">
+                                                                <span>
+                                                                </span><i class="far fa-building fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
+                    
                 </div>
                 <div class="col-md-4 text-center" id="div_juzgado" runat="server">
-                    <h5>Juzgados y Salas</h5>
-                    <asp:ImageButton ID="img_juzgado" runat="server" ImageUrl="~/img/iconos/salas@2x.png" Width="64" Height="64" OnClick="img_juzgado_Click" />
+                    <h5>Sección y Cámaras</h5>
+                    <asp:LinkButton CssClass="buttonClass" ID="img_juzgado" runat="server" OnClick="img_juzgado_Click">
+                                                                <span>
+                                                                </span><i class="fas fa-video fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
+                    
                 </div>
             </div>
         </div>

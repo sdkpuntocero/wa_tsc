@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace aw_transcript {
-    
-    
-    public partial class menu {
-        
+namespace aw_transcript
+{
+
+
+    public partial class menu
+    {
+
         /// <summary>
         /// Control ScriptManager1.
         /// </summary>
@@ -20,7 +22,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
         /// Control lbl_welcome.
         /// </summary>
@@ -29,7 +31,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_welcome;
-        
+
         /// <summary>
         /// Control lbl_fuser.
         /// </summary>
@@ -38,7 +40,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_fuser;
-        
+
         /// <summary>
         /// Control lbl_idfuser.
         /// </summary>
@@ -47,7 +49,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idfuser;
-        
+
         /// <summary>
         /// Control lbl_profile.
         /// </summary>
@@ -56,7 +58,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_profile;
-        
+
         /// <summary>
         /// Control lbl_profileuser.
         /// </summary>
@@ -65,7 +67,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_profileuser;
-        
+
         /// <summary>
         /// Control lbl_idprofileuser.
         /// </summary>
@@ -74,7 +76,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idprofileuser;
-        
+
         /// <summary>
         /// Control lbl_center.
         /// </summary>
@@ -83,7 +85,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_center;
-        
+
         /// <summary>
         /// Control lbl_centername.
         /// </summary>
@@ -92,7 +94,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_centername;
-        
+
         /// <summary>
         /// Control lbl_idcenter.
         /// </summary>
@@ -101,7 +103,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idcenter;
-        
+
         /// <summary>
         /// Control div_control_users.
         /// </summary>
@@ -110,7 +112,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_control_users;
-        
+
         /// <summary>
         /// Control img_control_users.
         /// </summary>
@@ -118,8 +120,8 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_control_users;
-        
+        protected global::System.Web.UI.WebControls.LinkButton img_control_users;
+
         /// <summary>
         /// Control div_control_centers.
         /// </summary>
@@ -128,7 +130,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_control_centers;
-        
+
         /// <summary>
         /// Control img_control_centers.
         /// </summary>
@@ -136,8 +138,8 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_control_centers;
-        
+        protected global::System.Web.UI.WebControls.LinkButton img_control_centers;
+
         /// <summary>
         /// Control div_material.
         /// </summary>
@@ -146,7 +148,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_material;
-        
+
         /// <summary>
         /// Control img_material.
         /// </summary>
@@ -154,8 +156,8 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_material;
-        
+        protected global::System.Web.UI.WebControls.LinkButton img_material;
+
         /// <summary>
         /// Control div_tracing.
         /// </summary>
@@ -164,7 +166,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_tracing;
-        
+
         /// <summary>
         /// Control img_tracing.
         /// </summary>
@@ -172,8 +174,8 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_tracing;
-        
+        protected global::System.Web.UI.WebControls.LinkButton img_tracing;
+
         /// <summary>
         /// Control div_resumen.
         /// </summary>
@@ -182,7 +184,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_resumen;
-        
+
         /// <summary>
         /// Control img_summary.
         /// </summary>
@@ -190,6 +192,6 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_summary;
+        protected global::System.Web.UI.WebControls.LinkButton img_summary;
     }
 }

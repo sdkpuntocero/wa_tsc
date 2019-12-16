@@ -38,24 +38,43 @@
                 </div>
                 <div class="row animated bounceInUp">
                     <div class="col-md-3 text-center" id="div_perfil" runat="server">
+
+
+
                         <h5>
                             <asp:Label ID="lbl_perfil" runat="server" Text="Su Perfil"></asp:Label></h5>
-                        <asp:ImageButton ID="img_perfil" runat="server" ImageUrl="~/img/iconos/perfil@2x.png" Width="64" Height="64" OnClick="img_perfil_Click" />
+                        <asp:LinkButton CssClass="buttonClass" ID="img_perfil" runat="server" OnClick="img_perfil_Click">
+                                                                <span>
+                                                                </span><i class="fas fa-user-tie fa-4x"   style="color:cornflowerblue" ></i>
+                        </asp:LinkButton>
+
                     </div>
                     <div class="col-md-3 text-center" id="div_administrador" runat="server">
                         <h5>
                             <asp:Label ID="lbl_administrador" runat="server" Text="Administradores"></asp:Label></h5>
-                        <asp:ImageButton ID="img_administrador" runat="server" ImageUrl="~/img/iconos/administrador@2x.png" Width="64" Height="64" OnClick="img_administrador_Click" />
+                        <asp:LinkButton CssClass="buttonClass" ID="img_administrador" runat="server" OnClick="img_administrador_Click">
+                                                                <span>
+                                                                </span><i class="fas fa-user-cog fa-4x"   style="color:cornflowerblue" ></i>
+                        </asp:LinkButton>
+
                     </div>
                     <div class="col-md-3 text-center" id="div_superintendent" runat="server">
                         <h5>
                             <asp:Label ID="lbl_superintendent" runat="server" Text="Supervisores"></asp:Label></h5>
-                        <asp:ImageButton ID="img_superintendent" runat="server" ImageUrl="~/img/iconos/supervisor@2x.png" Width="64" Height="64" OnClick="img_superintendent_Click" />
+                        <asp:LinkButton CssClass="buttonClass" ID="img_superintendent" runat="server" OnClick="img_superintendent_Click">
+                                                                <span>
+                                                                </span><i class="fas fa-user-check fa-4x"   style="color:cornflowerblue" ></i>
+                        </asp:LinkButton>
+
                     </div>
                     <div class="col-md-3 text-center" id="div_operator" runat="server">
                         <h5>
                             <asp:Label ID="lbl_operator" runat="server" Text="Operadores"></asp:Label></h5>
-                        <asp:ImageButton ID="img_operator" runat="server" ImageUrl="~/img/iconos/operador@2x.png" Width="64" Height="64" OnClick="img_operator_Click" />
+                        <asp:LinkButton CssClass="buttonClass" ID="img_operator" runat="server" OnClick="img_operator_Click">
+                                                                <span>
+                                                                </span><i class="fas fa-user fa-4x"   style="color:cornflowerblue" ></i>
+                        </asp:LinkButton>
+
                     </div>
                 </div>
             </div>

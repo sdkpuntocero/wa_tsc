@@ -162,7 +162,7 @@
     <Content Include="menu.aspx" />
     <Content Include="menu_herramientas.aspx" />
     <Content Include="menu_resumen.aspx" />
-    <Content Include="menu_tribunal.aspx" />
+    <Content Include="menu_inmueble.aspx" />
     <Content Include="menu_usuarios.aspx" />
     <Content Include="perfil.aspx" />
     <Content Include="programar_carga.aspx" />
@@ -192,7 +192,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="seguimiento.aspx" />
     <Content Include="styles\style.css" />
-    <Content Include="tribunal.aspx" />
+    <Content Include="inmueble.aspx" />
     <Content Include="usuarios.aspx" />
     <Content Include="videos_consultados.aspx" />
     <Content Include="Web.config">
@@ -386,12 +386,12 @@
     <Compile Include="menu_resumen.aspx.designer.cs">
       <DependentUpon>menu_resumen.aspx</DependentUpon>
     </Compile>
-    <Compile Include="menu_tribunal.aspx.cs">
-      <DependentUpon>menu_tribunal.aspx</DependentUpon>
+    <Compile Include="menu_inmueble.aspx.cs">
+      <DependentUpon>menu_inmueble.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="menu_tribunal.aspx.designer.cs">
-      <DependentUpon>menu_tribunal.aspx</DependentUpon>
+    <Compile Include="menu_inmueble.aspx.designer.cs">
+      <DependentUpon>menu_inmueble.aspx</DependentUpon>
     </Compile>
     <Compile Include="menu_usuarios.aspx.cs">
       <DependentUpon>menu_usuarios.aspx</DependentUpon>
@@ -453,12 +453,12 @@
     <Compile Include="site.Master.designer.cs">
       <DependentUpon>site.Master</DependentUpon>
     </Compile>
-    <Compile Include="tribunal.aspx.cs">
-      <DependentUpon>tribunal.aspx</DependentUpon>
+    <Compile Include="inmueble.aspx.cs">
+      <DependentUpon>inmueble.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="tribunal.aspx.designer.cs">
-      <DependentUpon>tribunal.aspx</DependentUpon>
+    <Compile Include="inmueble.aspx.designer.cs">
+      <DependentUpon>inmueble.aspx</DependentUpon>
     </Compile>
     <Compile Include="usuarios.aspx.cs">
       <DependentUpon>usuarios.aspx</DependentUpon>

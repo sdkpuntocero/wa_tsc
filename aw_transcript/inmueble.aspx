@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="tribunal.aspx.cs" Inherits="aw_transcript.tribunal" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="inmueble.aspx.cs" Inherits="aw_transcript.tribunal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -11,7 +11,7 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-1">
-                                <a href="menu_tribunal.aspx">
+                                <a href="menu_inmueble.aspx">
                                     <img alt="" src="img/ico_back.png" /></a>
                             </div>
                             <div class="col-md-1">
@@ -37,19 +37,20 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <h3 class="text-left">Actualizar datos de Tribunal</h3>
+                                <h3 class="text-left">Actualizar datos de Inmueble</h3>
                                 <br />
                             </div>
                             <div class="col-md-12 text-left">
-                                <asp:CheckBox CssClass="checkbox-inline" ID="chkb_editar" runat="server" AutoPostBack="true" Text="Seleccione para Editar al Tribunal" OnCheckedChanged="chkb_editar_CheckedChanged" />
+                                <asp:CheckBox CssClass="checkbox-inline" ID="chkb_editar" runat="server" AutoPostBack="true" Text="Seleccione para Editar al Inmueble" OnCheckedChanged="chkb_editar_CheckedChanged" />
                             </div>
-                            <div class="col-md-4">
-                                <asp:Image CssClass="center-block img-responsive" ID="Image1" runat="server" ImageUrl="~/img/iconos/tribunal@2x.png" Width="64" Height="64" />
+                            <div class="col-md-4 text-center">
+                                <i class="far fa-building fa-4x"   style="color:cornflowerblue" ></i>
+                                
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <h5>
-                                        <asp:Label CssClass="control-label" ID="lbl_tribunal" runat="server" Text="*Nombre de Tribunal"></asp:Label></h5>
+                                        <asp:Label CssClass="control-label" ID="lbl_tribunal" runat="server" Text="*Nombre de Inmueble"></asp:Label></h5>
                                     <asp:TextBox CssClass="form-control" ID="txt_tribunal" runat="server" placeholder="Capturar Nombre de Tribunal"></asp:TextBox>
                                     <div class="text-right">
                                         <asp:RequiredFieldValidator ID="rfv_tribunal" runat="server" ErrorMessage="*Campo Obligatorio" ControlToValidate="txt_tribunal" ForeColor="DarkRed"></asp:RequiredFieldValidator>

@@ -10,10 +10,12 @@
             <br>
             <div class="row">
                 <div class="col-md-4"></div>
-                <div class="col-md-4 img-thumbnail">
+                <div class="col-md-4 img-thumbnail center-block">
                     <br />
+                    <center>
                     <h3 class="text-center">Control de Acceso</h3>
-                    <img src="img/iconos/perfil.png" class="img-responsive center-block" width="64">
+                    <i class="fas fa-user-lock fa-4x" style="color:cornflowerblue"></i>
+                    </center>
                     <br />
                     <div class="form-group">
                         <h5>

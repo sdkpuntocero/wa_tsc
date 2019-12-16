@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace aw_transcript {
-    
-    
-    public partial class tribunal {
-        
+namespace aw_transcript
+{
+
+
+    public partial class tribunal
+    {
+
         /// <summary>
         /// Control ScriptManager1.
         /// </summary>
@@ -20,7 +22,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
         /// Control UpdatePanel1.
         /// </summary>
@@ -29,7 +31,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
+
         /// <summary>
         /// Control lbl_welcome.
         /// </summary>
@@ -38,7 +40,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_welcome;
-        
+
         /// <summary>
         /// Control lbl_fuser.
         /// </summary>
@@ -47,7 +49,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_fuser;
-        
+
         /// <summary>
         /// Control lbl_idfuser.
         /// </summary>
@@ -56,7 +58,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idfuser;
-        
+
         /// <summary>
         /// Control lbl_profile.
         /// </summary>
@@ -65,7 +67,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_profile;
-        
+
         /// <summary>
         /// Control lbl_profileuser.
         /// </summary>
@@ -74,7 +76,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_profileuser;
-        
+
         /// <summary>
         /// Control lbl_idprofileuser.
         /// </summary>
@@ -83,7 +85,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idprofileuser;
-        
+
         /// <summary>
         /// Control lbl_center.
         /// </summary>
@@ -92,7 +94,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_center;
-        
+
         /// <summary>
         /// Control lbl_centername.
         /// </summary>
@@ -101,7 +103,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_centername;
-        
+
         /// <summary>
         /// Control lbl_idcenter.
         /// </summary>
@@ -110,7 +112,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idcenter;
-        
+
         /// <summary>
         /// Control chkb_editar.
         /// </summary>
@@ -119,16 +121,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkb_editar;
-        
-        /// <summary>
-        /// Control Image1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
-        
+
         /// <summary>
         /// Control lbl_tribunal.
         /// </summary>
@@ -137,7 +130,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_tribunal;
-        
+
         /// <summary>
         /// Control txt_tribunal.
         /// </summary>
@@ -146,7 +139,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_tribunal;
-        
+
         /// <summary>
         /// Control rfv_tribunal.
         /// </summary>
@@ -155,7 +148,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_tribunal;
-        
+
         /// <summary>
         /// Control lbl_telefono.
         /// </summary>
@@ -164,7 +157,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_telefono;
-        
+
         /// <summary>
         /// Control txt_telefono.
         /// </summary>
@@ -173,7 +166,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_telefono;
-        
+
         /// <summary>
         /// Control revPhone.
         /// </summary>
@@ -182,7 +175,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
-        
+
         /// <summary>
         /// Control lbl_email.
         /// </summary>
@@ -191,7 +184,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_email;
-        
+
         /// <summary>
         /// Control txt_email.
         /// </summary>
@@ -200,7 +193,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_email;
-        
+
         /// <summary>
         /// Control lbl_callenum.
         /// </summary>
@@ -209,7 +202,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_callenum;
-        
+
         /// <summary>
         /// Control txt_callenum.
         /// </summary>
@@ -218,7 +211,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_callenum;
-        
+
         /// <summary>
         /// Control rfv_callenum.
         /// </summary>
@@ -227,7 +220,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_callenum;
-        
+
         /// <summary>
         /// Control lbl_cp.
         /// </summary>
@@ -236,7 +229,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_cp;
-        
+
         /// <summary>
         /// Control txt_cp.
         /// </summary>
@@ -245,7 +238,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_cp;
-        
+
         /// <summary>
         /// Control mee_cp.
         /// </summary>
@@ -254,7 +247,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::AjaxControlToolkit.MaskedEditExtender mee_cp;
-        
+
         /// <summary>
         /// Control btn_cp.
         /// </summary>
@@ -263,7 +256,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_cp;
-        
+
         /// <summary>
         /// Control rfv_cp.
         /// </summary>
@@ -272,7 +265,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_cp;
-        
+
         /// <summary>
         /// Control lbl_colonia.
         /// </summary>
@@ -281,7 +274,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_colonia;
-        
+
         /// <summary>
         /// Control ddl_colonia.
         /// </summary>
@@ -290,7 +283,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddl_colonia;
-        
+
         /// <summary>
         /// Control rfv_colonia.
         /// </summary>
@@ -299,7 +292,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfv_colonia;
-        
+
         /// <summary>
         /// Control lbl_municipio.
         /// </summary>
@@ -308,7 +301,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_municipio;
-        
+
         /// <summary>
         /// Control txt_municipio.
         /// </summary>
@@ -317,7 +310,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_municipio;
-        
+
         /// <summary>
         /// Control lbl_estado.
         /// </summary>
@@ -326,7 +319,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_estado;
-        
+
         /// <summary>
         /// Control txt_estado.
         /// </summary>
@@ -335,7 +328,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_estado;
-        
+
         /// <summary>
         /// Control btn_guardar.
         /// </summary>
@@ -344,7 +337,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_guardar;
-        
+
         /// <summary>
         /// Control upModal.
         /// </summary>
@@ -353,7 +346,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.UpdatePanel upModal;
-        
+
         /// <summary>
         /// Control lblModalTitle.
         /// </summary>
@@ -362,7 +355,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblModalTitle;
-        
+
         /// <summary>
         /// Control lblModalBody.
         /// </summary>

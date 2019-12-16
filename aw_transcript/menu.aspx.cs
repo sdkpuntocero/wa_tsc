@@ -81,27 +81,27 @@ namespace aw_transcript
             }
         }
 
-        protected void img_control_users_Click(object sender, ImageClickEventArgs e)
+        protected void img_control_users_Click(object sender, EventArgs e)
         {
             Response.Redirect("menu_usuarios.aspx");
         }
 
-        protected void img_control_centers_Click(object sender, ImageClickEventArgs e)
+        protected void img_control_centers_Click(object sender, EventArgs e)
         {
-            Response.Redirect("menu_tribunal.aspx");
+            Response.Redirect("menu_inmueble.aspx");
         }
 
-        protected void img_material_Click(object sender, ImageClickEventArgs e)
+        protected void img_material_Click(object sender, EventArgs e)
         {
             Response.Redirect("menu_herramientas.aspx");
         }
 
-        protected void img_tracing_Click(object sender, ImageClickEventArgs e)
+        protected void img_tracing_Click(object sender, EventArgs e)
         {
             Response.Redirect("seguimiento.aspx");
         }
 
-        protected void img_summary_Click(object sender, ImageClickEventArgs e)
+        protected void img_summary_Click(object sender, EventArgs e)
         {
             Response.Redirect("menu_resumen.aspx");
         }

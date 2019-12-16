@@ -79,14 +79,15 @@ namespace aw_transcript
             }
         }
 
-        protected void img_tribunales_Click(object sender, ImageClickEventArgs e)
+        protected void img_tribunales_Click(object sender, EventArgs e)
         {
-            Response.Redirect("tribunal.aspx");
+            Response.Redirect("inmueble.aspx");
         }
 
-        protected void img_juzgado_Click(object sender, ImageClickEventArgs e)
+        protected void img_juzgado_Click(object sender, EventArgs e)
         {
             Response.Redirect("juzgados_salas.aspx");
         }
+
     }
 }

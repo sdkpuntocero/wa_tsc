@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace aw_transcript {
-    
-    
-    public partial class menu_tribunal {
-        
+namespace aw_transcript
+{
+
+
+    public partial class menu_tribunal
+    {
+
         /// <summary>
         /// Control ScriptManager1.
         /// </summary>
@@ -20,7 +22,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
         /// Control lbl_welcome.
         /// </summary>
@@ -29,7 +31,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_welcome;
-        
+
         /// <summary>
         /// Control lbl_fuser.
         /// </summary>
@@ -38,7 +40,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_fuser;
-        
+
         /// <summary>
         /// Control lbl_idfuser.
         /// </summary>
@@ -47,7 +49,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idfuser;
-        
+
         /// <summary>
         /// Control lbl_profile.
         /// </summary>
@@ -56,7 +58,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_profile;
-        
+
         /// <summary>
         /// Control lbl_profileuser.
         /// </summary>
@@ -65,7 +67,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_profileuser;
-        
+
         /// <summary>
         /// Control lbl_idprofileuser.
         /// </summary>
@@ -74,7 +76,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idprofileuser;
-        
+
         /// <summary>
         /// Control lbl_center.
         /// </summary>
@@ -83,7 +85,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_center;
-        
+
         /// <summary>
         /// Control lbl_centername.
         /// </summary>
@@ -92,7 +94,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_centername;
-        
+
         /// <summary>
         /// Control lbl_idcenter.
         /// </summary>
@@ -101,7 +103,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbl_idcenter;
-        
+
         /// <summary>
         /// Control div_tribunales.
         /// </summary>
@@ -110,7 +112,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_tribunales;
-        
+
         /// <summary>
         /// Control img_tribunales.
         /// </summary>
@@ -118,8 +120,8 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_tribunales;
-        
+        protected global::System.Web.UI.WebControls.LinkButton img_tribunales;
+
         /// <summary>
         /// Control div_juzgado.
         /// </summary>
@@ -128,7 +130,7 @@ namespace aw_transcript {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_juzgado;
-        
+
         /// <summary>
         /// Control img_juzgado.
         /// </summary>
@@ -136,6 +138,6 @@ namespace aw_transcript {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton img_juzgado;
+        protected global::System.Web.UI.WebControls.LinkButton img_juzgado;
     }
 }

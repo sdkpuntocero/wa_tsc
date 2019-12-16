@@ -27,10 +27,7 @@ namespace aw_transcript
             }
         }
 
-        protected void img_perfil_Click(object sender, ImageClickEventArgs e)
-        {
-            Response.Redirect("perfil.aspx");
-        }
+        
 
         private void inf_user()
         {
@@ -83,19 +80,26 @@ namespace aw_transcript
             }
         }
 
-        protected void img_administrador_Click(object sender, ImageClickEventArgs e)
+
+
+        protected void img_perfil_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("perfil.aspx");
+        }
+
+        protected void img_administrador_Click(object sender, EventArgs e)
         {
             Session["ss_save_user"] = 2;
             Response.Redirect("usuarios.aspx");
         }
 
-        protected void img_superintendent_Click(object sender, ImageClickEventArgs e)
+        protected void img_superintendent_Click(object sender, EventArgs e)
         {
             Session["ss_save_user"] = 3;
             Response.Redirect("usuarios.aspx");
         }
 
-        protected void img_operator_Click(object sender, ImageClickEventArgs e)
+        protected void img_operator_Click(object sender, EventArgs e)
         {
             Session["ss_save_user"] = 4;
             Response.Redirect("usuarios.aspx");

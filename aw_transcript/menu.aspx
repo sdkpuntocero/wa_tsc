@@ -40,25 +40,42 @@
             <div class="row">
                 <div class="col-md-4 text-center" id="div_control_users" runat="server">
                     <h5>Control de Usuarios</h5>
-                    <asp:ImageButton ID="img_control_users" runat="server" ImageUrl="~/img/iconos/contro de usuarios@2x.png" OnClick="img_control_users_Click" />
+                    <asp:LinkButton CssClass="buttonClass" ID="img_control_users" runat="server" OnClick="img_control_users_Click">
+                                                                <span>
+                                                                </span><i class="far fa-user fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
                 </div>
-
                 <div class="col-md-4 text-center" id="div_control_centers" runat="server">
-                    <h5>Control de Centros</h5>
-                    <asp:ImageButton ID="img_control_centers" runat="server" ImageUrl="~/img/iconos/control de centros@2x.png" OnClick="img_control_centers_Click" />
+                    <h5>Control de Inmueble</h5>
+                    <asp:LinkButton CssClass="buttonClass" ID="img_control_centers" runat="server" OnClick="img_control_centers_Click">
+                                                                <span>
+                                                                </span><i class="far fa-building fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
                 </div>
 
                 <div class="col-md-4 text-center" id="div_material" runat="server">
                     <h5>Herramientas</h5>
-                    <asp:ImageButton ID="img_material" runat="server" ImageUrl="~/img/iconos/herramientas@2x.png" OnClick="img_material_Click" />
+                    <asp:LinkButton CssClass="buttonClass" ID="img_material" runat="server" OnClick="img_material_Click">
+                                                                <span>
+                                                                </span><i class="far fa-list-alt fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
+
                 </div>
                 <div class="col-md-6 text-center" id="div_tracing" runat="server">
-                    <h5>Visualización de Videos <br/> por Expediente</h5>
-                    <asp:ImageButton ID="img_tracing" runat="server" ImageUrl="~/img/iconos/grabaciones@2x.png" OnClick="img_tracing_Click" />
+                    <h5>Visualización</h5>
+                    <asp:LinkButton CssClass="buttonClass" ID="img_tracing" runat="server" OnClick="img_tracing_Click">
+                                                                <span>
+                                                                </span><i class="far fa-eye fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
+
                 </div>
                 <div class="col-md-6 text-center" id="div_resumen" runat="server">
                     <h5>Resumen</h5>
-                    <asp:ImageButton ID="img_summary" runat="server" ImageUrl="~/img/iconos/resumen estadisticas@2x.png" OnClick="img_summary_Click" />
+                    <asp:LinkButton CssClass="buttonClass" ID="img_summary" runat="server" OnClick="img_summary_Click">
+                                                                <span>
+                                                                </span><i class="far fa-chart-bar fa-4x"   style="color:cornflowerblue" ></i>
+                    </asp:LinkButton>
+
                 </div>
             </div>
         </div>
